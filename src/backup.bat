@@ -1,12 +1,20 @@
 @ECHO OFF
 
-cd c:\Users\username\repos\ar-color-depth
+cd c:\Users\Public\Experiments\ar-color-depth
 
-ECHO Staging new data files for upload
+ECHO -
+ECHO ------------------------------------------------------------
+ECHO TASK: Staging new data files for upload (git add data)
 git add data
 
-ECHO Committing new data files
-git commit -m "Project backup target %date%"
+ECHO -
+ECHO ------------------------------------------------------------
+ECHO TASK: Committing new data files (git commit)
+git commit -m "Project backup target %date% %time%"
 
-ECHO Pushing new data files to backup repository
+ECHO -
+ECHO ------------------------------------------------------------
+ECHO TASK: Pushing new data files to backup repository (git push)
 git push
+
+pause
